@@ -28,7 +28,7 @@ logging:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/DB_LOGIN
+    url: jdbc:postgresql://localhost:5432/db_login
     username: postgres
     password: root
   jpa:
@@ -36,7 +36,7 @@ spring:
       ddl-auto: update
     show-sql: true
     properties:
-      database: DB_LOGIN
+      database: db_login
       hibernate:
         jdbc:
           lob:

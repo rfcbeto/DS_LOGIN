@@ -18,21 +18,21 @@ public class Permission implements GrantedAuthority, Serializable{
 
 	private static final long serialVersionUID = -7277633207203428526L;
 	
-	public Permission(Long id, String description) {
-		this.id = id;
-		this.description = description;
-	}
-
-	public Permission() {
-	}	
-	
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@Column
 	private String description;
+
+	public Permission() {
+	}	
+
+	public Permission(Long id, String description) {
+		this.id = id;
+		this.description = description;
+	}
+	
 
 	@Override
 	public String getAuthority() {
@@ -54,6 +54,5 @@ public class Permission implements GrantedAuthority, Serializable{
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
 	
 }
